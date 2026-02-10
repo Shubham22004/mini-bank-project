@@ -1,0 +1,188 @@
+/* ================================
+   Royal Theme CSS (Responsive)
+   ================================ */
+
+/* ---- CSS Reset-ish ---- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* ---- App Container ---- */
+.app-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* ---- Headings ---- */
+h1 {
+  text-align: center;
+  color: #eab308; /* gold */
+  margin-bottom: 24px;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+h2 {
+  color: #facc15;
+  margin-bottom: 12px;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+}
+
+/* ---- Card ---- */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ---- Form Elements ---- */
+label {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+  font-size: 0.95rem;
+}
+
+input::placeholder {
+  color: #cbd5f5;
+}
+
+input:focus,
+select:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.25);
+}
+
+/* ---- Buttons ---- */
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #eab308, #f59e0b);
+  color: #1e293b;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(234, 179, 8, 0.45);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* ---- Tables ---- */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  min-width: 600px; /* enables scroll on mobile */
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+th {
+  background: rgba(234, 179, 8, 0.25);
+  color: #fde047;
+  font-weight: 600;
+}
+
+td {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ---- Messages ---- */
+.message {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(34, 197, 94, 0.2);
+  color: #86efac;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+/* ================================
+   Responsive Breakpoints
+   ================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  h1 {
+    margin-bottom: 18px;
+  }
+
+  .card {
+    border-radius: 14px;
+  }
+
+  input,
+  select {
+    padding: 10px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 0.8
+  }
+}
